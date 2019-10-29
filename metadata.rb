@@ -16,5 +16,9 @@ chef_version '>= 14.0'
 # The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
-#
+
+#depends 'mongodb3', '~> 5.3.0'
+#depends 'apt'
+
+
 # source_url 'https://github.com/<insert_org_here>/mongo'
