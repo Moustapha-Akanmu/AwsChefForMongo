@@ -11,7 +11,7 @@ unless os.windows?
 end
 
 # This is an example test, replace it with your own test.
-describe port(27017), :skip do
+describe port(27017) do
   it { should be_listening }
 end
 

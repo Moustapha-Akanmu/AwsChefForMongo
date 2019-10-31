@@ -43,6 +43,12 @@ describe 'mongo::default' do
     it 'should create mongod.service template in /etc/systemd/system/mongod.service' do
         expect(chef_run).to create_template '/etc/systemd/system/mongod.service'
     end
+
+    it 'should create mongod.conf template in /etc/mongod.conf with port 27017' do
+      expect(chef_run).to create_template('/etc/mongod.conf').with_variables(proxy_port: 27017)
+    end
+
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end

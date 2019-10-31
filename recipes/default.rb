@@ -26,12 +26,16 @@ template '/etc/mongod.conf' do
   group 'root'
 end
 
+
+
 template '/etc/systemd/system/mongod.service' do
   source 'mongod.service.erb'
   mode '0600'
   owner 'root'
   group 'root'
 end
+
+
 
 
  package 'mongodb-org' do
